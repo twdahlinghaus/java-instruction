@@ -4,28 +4,31 @@ public class ProductApp {
 
     public static void main(String args[]) {
         // display a welcome message
-        System.out.println("Welcome to the Product Selector");
+        System.out.println("Welcome to the Product Viewer");
         System.out.println();
 
-        // display 1 or more products
+        // perform 1 or more selections
         @SuppressWarnings("resource")
-		Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         String choice = "y";
         while (choice.equalsIgnoreCase("y")) {
-            // get the input from the user
             System.out.print("Enter product code: ");
-            String productCode = sc.next();  // read the product code
-            sc.nextLine();  // discard any other data entered on the line
+            String productCode = sc.nextLine();  // read the product code
 
             // get the Product object
-            Product product = ProductDB.getProduct(productCode);
+            Product p = ProductDB.getProduct(productCode);
 
             // display the output
             System.out.println();
-            System.out.println("SELECTED PRODUCT");
-            System.out.println("Description: " + product.getDescription());
-            System.out.println("Price:       " + product.getPriceNumberFormatted());
+            if (p != null) {
+                System.out.println("Description: " + p.toString());
+                System.out.println("Price:       " + p.getPriceFormatted());
+            } else {
+                System.out.println("No product matches this product code.");
+            }
+
             System.out.println();
+            System.out.println("Product count: " + Product.getCount() + "\n");
 
             // see if the user wants to continue
             System.out.print("Continue? (y/n): ");

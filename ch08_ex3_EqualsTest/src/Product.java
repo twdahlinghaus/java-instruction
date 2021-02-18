@@ -11,17 +11,8 @@ public class Product {
         description = "";
         price = 0;
     }
-    
-        public Product(String code, String description, double price) {
-		super();
-		this.code = code;
-		this.description = description;
-		this.price = price;
-	}
 
-
-
-	public void setCode(String code) {
+    public void setCode(String code) {
         this.code = code;
     }
 
@@ -49,9 +40,19 @@ public class Product {
         NumberFormat currency = NumberFormat.getCurrencyInstance();
         return currency.format(price);
     }
+        
+       @Override
+       public boolean equals(Object object) {
+    	   if (object instanceof Product) {
+    		   Product product2 = (Product) object;
+    		   if (code.equals(product2.getCode()) &&
+    			   description.equals(product2.getDescription()) &&
+    			   price == product2.getPrice()) {
+    			   return true;
+    		   }
+    	   }
+    	   return false;
+    	   
+       }
+    }    
 
-	public String getPriceNumberFormatted() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-}

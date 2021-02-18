@@ -5,23 +5,12 @@ public class Product {
     private String code;
     private String description;
     private double price;
+    protected static int count = 0;
 
     public Product() {
-        code = "";
-        description = "";
-        price = 0;
     }
-    
-        public Product(String code, String description, double price) {
-		super();
-		this.code = code;
-		this.description = description;
-		this.price = price;
-	}
 
-
-
-	public void setCode(String code) {
+    public void setCode(String code) {
         this.code = code;
     }
 
@@ -50,8 +39,12 @@ public class Product {
         return currency.format(price);
     }
 
-	public String getPriceNumberFormatted() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+    @Override
+    public String toString() {
+        return description;
+    }
+
+    public static int getCount() {
+        return count;
+    }
 }

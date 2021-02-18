@@ -13,30 +13,22 @@ public class DiceRoller {
 		System.out.println("Roll the dice? (y/n)");
 		
 		public static int getRandomInt(int limit) {
-			double d1 = Math.random() * 6;
+			double d1 = Math.random() * 6 + 1;
 			int randomInt = (int) d1;
-			randomInt++
+			randomInt++;
 			return randomInt;
 			
 		}
-		
+		{
 		
 		//  Roll the dice
 		while (choice.equalsIgnoreCase("y")) {
-		int die 1 = sc.nextInt();
-		int die 2 = sc.nextInt();
+		int die1 = sc.nextInt();
+		int die2 = sc.nextInt();
 		
 			
-			// biz logic - calculate quarters, dimes, nickels, and pennies as ints
-			int die 1 = d1
-			int die 2 = 
-			
-			
-		
 		//  If two ones rolled, display SNAKE EYES.  If two sixes rolled, display BOX CARS.
-		
-		
-		
+				
 		
 		// See if the user wants to continue
 		System.out.println("Roll again? (y/n)");

@@ -16,7 +16,7 @@ public class ProductApp {
 		
 		
 		// Create a vendor
-		Vendor vendor1 = new Vendor ();  //Java gives you a default constructor by default
+		Vendor vendor1 = new Vendor();  //Java gives you a default constructor by default
 		// Java's default constructor goes away if you define a constructor
 		
 		String code = Console.getString("Product Code:  ");

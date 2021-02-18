@@ -1,3 +1,4 @@
+import java.text.NumberFormat;
 import java.util.Scanner;
 
 public class TempConverterApp {
@@ -17,14 +18,20 @@ public class TempConverterApp {
         while (choice.equalsIgnoreCase("y")) {
             // get input from the user
             System.out.print("Enter Temp in Fahrenheit: ");
-            double c = sc.nextDouble();
+            double fah = sc.nextDouble();
             
 
             // calculate the conversion to Celcius
-            c = (c-32) * 5/9;
+            double cel = (fah-32) * 5/9;
+            
+            // format the celcius output
+            NumberFormat number = NumberFormat.getInstance();
+            number.setMaximumFractionDigits(2);
+            String celString = number.format(cel);
+            
 
             // display the result
-            System.out.println("Degrees in Celcius:         "+c);
+            System.out.println("Degrees in Celcius:         "+ celString + "\n");
             System.out.println();
 
             // see if the user wants to continue
