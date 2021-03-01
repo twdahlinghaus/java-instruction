@@ -1,0 +1,7 @@
+1	Fast 5	R	2011	Justin Lin
+100	Indiana Jones and the Raiders of the Lost Ark	PG	1981	Steven Spielberg
+101	Sixteen Candles	PG	1984	John Hughes
+102	Full Metal Jacket	R	1987	Stanley Kubrick
+103	The Big Lebowski	R	1998	Joel Coen
+104	A Clockwork Orange	R	1971	Stanley Kubrick
+2	The Fast and the Furious	R	2001	Justin Lin
