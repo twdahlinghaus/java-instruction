@@ -5,12 +5,15 @@ import java.util.Arrays;
 import business.User;
 import db.DAO;
 import db.UserList;
+import db.UserTextFile;
 import util.Console;
 
 public class PRSConsoleApp {
-	private static DAO<User> userDAO = new UserList();
 
-	public static void main(String[] args) {
+
+private static DAO<User> userDAO = new UserTextFile();
+
+public static void main(String[] args) {
 		System.out.println("Welcome to the PRS Console App!");
 		
 		int command = 0;
@@ -64,7 +67,7 @@ public class PRSConsoleApp {
 				
 			case 3:
 				id = Console.getInt("User ID to retried? ", 0, Integer.MAX_VALUE);
-				User user = userDAO.getbyID(id);
+				User user = userDAO.getById(id);
 				if (user != null) {
 					System.out.println("User Found!");
 					System.out.println(user);

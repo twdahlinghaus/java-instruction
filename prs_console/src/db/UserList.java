@@ -14,7 +14,7 @@ public class UserList implements DAO<User> {
 	}
 
 	@Override
-	public User getbyID(int id) {
+	public User getById(int id) {
 		// Loop through user list to find the user who's id matches 'id'
 		User u = null;
 		
@@ -55,5 +55,7 @@ public class UserList implements DAO<User> {
 		// not yet implemented
 		return false;
 	}
+
+	
 
 }
