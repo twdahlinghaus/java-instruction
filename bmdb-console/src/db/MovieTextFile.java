@@ -19,12 +19,10 @@ public class MovieTextFile implements DAOUploadable<Movie> {
 	private static final String MOVIE_FILE_NAME = "movies.txt";
 	private static final String MOVIE_UPLOAD_FILE_NAME = "movie-upload.txt";
 	List<Movie> movies = new ArrayList<>();
-	
 
 	public MovieTextFile() {
 		getAll();
 	}
-
 
 	@Override
 	public Movie getById(int id) {
